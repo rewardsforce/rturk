@@ -11,8 +11,10 @@ module RTurk
     
     def to_params
       {'HITId' => hit_id,
-       'PageSize' => (page_size || 1000),
+       'PageSize' => (page_size || 100),
        'PageNumber' => page_number,
+       'SortProperty' => 'SubmitTime',
+       'SortDirection' => 'Descending',
        'AssignmentStatus' => status}
     end
 
